@@ -17,5 +17,10 @@ pipeline {
                 sh 'npm install --legacy-peer-deps'
             }
         }
+        stage('Test') {
+            steps {
+                sh './jenkins/scripts/test.sh'
+            }
+        }
     }
 }
